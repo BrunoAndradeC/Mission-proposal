@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #00FF00;
+    --bg-color: #000000;
+    --text-shadow: 0 0 10px #00FF00;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Efeito de TV Antiga */
+body::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    z-index: 20;
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+
+.container {
+    text-align: center;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color), inset 0 0 10px var(--primary-color);
+}
+
+button {
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+button:hover {
+    background: white;
+}
+
+.erro {
+    color: #FF0000;
+    font-size: 12px;
+}
