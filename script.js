@@ -1,6 +1,6 @@
 // Configurações do Telegram
-const TELEGRAM_TOKEN = '8332064581:AAHsM3tcSj27MdVHoRzF8Nb8EI697CcgIas';
-const CHAT_ID = '1753839424';
+const TELEGRAM_TOKEN = 'SEU_TOKEN_AQUI'; 
+const CHAT_ID = 'SEU_CHAT_ID_AQUI';
 
 const perguntas = [
     { q: "Onde foi o nosso primeiro beijo?", opts: ["Pátio", "Atrás do batista", "Sala"], ans: 1 },
@@ -73,3 +73,4 @@ function aceitar() {
 
 
 function recusar() { alert("Opção bloqueada! 👍"); }
+
