@@ -57,9 +57,19 @@ function verificar(fase, escolha) {
 }
 
 function aceitar() {
-    fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=ELA DISSE SIM! 💍`);
-    window.open('https://www.youtube.com/watch?v=g8z-qP34-1Y', '_blank');
-    document.getElementById('game-box').innerHTML = "<h1>VICTORY! ❤️</h1>";
+    const texto = "ELA DISSE SIM! 💍💖";
+    const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(texto)}`;
+    
+    fetch(url)
+        .then(response => console.log('Bot avisado!', response))
+        .catch(error => console.error('Erro no bot:', error));
+
+    // Pequeno atraso para garantir que o fetch saia antes da página mudar
+    setTimeout(() => {
+        window.open('https://www.youtube.com/watch?v=g8z-qP34-1Y', '_blank');
+        document.getElementById('game-box').innerHTML = "<h1>VICTORY! ❤️</h1><p>Te amo para sempre!</p>";
+    }, 500);
 }
+
 
 function recusar() { alert("Opção bloqueada! 👍"); }
