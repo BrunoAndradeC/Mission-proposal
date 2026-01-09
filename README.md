@@ -1,4 +1,4 @@
-# 💍 Operation Proposal: A Retro Quiz Adventure
+#  A Retro Quiz Adventure
 
 Uma experiência interativa em estilo 8-bit criada para um pedido de casamento especial, unindo a paixão pelo desenvolvimento web e o desejo de transformar um relacionamento em algo ainda maior.
 
